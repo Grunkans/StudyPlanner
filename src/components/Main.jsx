@@ -2,6 +2,7 @@ import { useStore } from '../data/store.js'
 import Day from "./day/Day"
 import PrioList from "./prio-list/PrioList.jsx"
 import { splitTodosIntoDays } from '../utils/list.js'
+// import Item from './day/Item'
 
 const Main = () => {
 	const todos = useStore(state => state.todos)
@@ -11,9 +12,14 @@ const Main = () => {
 	return (
 		<main>
 			<div className="day-view">
-				{days.map(d => (
-					<Day day={d} key={1 /* TODO kom på något sätt att ge varje dag en unik "key" */} />
+				{days.map((d, index) => (
+					<Day 
+					day={d} dIndex={index} key={index}
+				
+					/>
+					
 				))}
+				
 			</div>
 
 			<hr />
