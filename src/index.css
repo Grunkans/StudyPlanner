@@ -50,6 +50,14 @@ button:active { background-color: #2E9AFE; }
 	margin-top: 0.5em;
 }
 
+span {
+	cursor: pointer;
+
+}
+
+
+
+
 header {
 	text-align: center;
 	border-bottom: 1px solid black;
@@ -105,7 +113,7 @@ h2 {
 	box-shadow: 0 0 0.2em var(--c2);
 }
 .done { color: var(--c5); }
-.due { background-color: var(--c6); }
+.due { background-color: var(--c1); }
 
 .today h2 {
 	text-decoration: underline;

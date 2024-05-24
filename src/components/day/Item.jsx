@@ -20,17 +20,21 @@ const Item = ({ item }) => {
     deleteTodo(item.id);
   };
 
-	
+
+
 
   return (
-    <div className="item">
-      <input type="checkbox" checked={item.done} onChange={handleChange} />
+    <div data-cy="item-box" className="item">
+      <input data-cy="toggle-input" 
+	  type="checkbox" 
+	  checked={item.done} 
+	  onChange={handleChange} />
       <label className={itemClass} onClick={handleChange}>
         {item.text}
       </label>
       <span title="Snooza">💤</span>
       <span title="Ändra">✍️</span>
-      <button title="Ta bort" onClick={handleDelete}>🗑️</button>
+      <span data-cy="delete-button" title="Ta bort" onClick={handleDelete}>🗑️</span>
     </div>
   );
 };
