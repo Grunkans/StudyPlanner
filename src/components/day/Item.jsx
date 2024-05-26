@@ -34,7 +34,7 @@ const Item = ({ item }) => {
       </label>
       <span title="Snooza">💤</span>
       <span title="Ändra">✍️</span>
-      <span data-cy="delete-button" title="Ta bort" onClick={handleDelete}>🗑️</span>
+      <span className="delete" data-cy="delete-button" title="Ta bort" onClick={handleDelete}>🗑️</span>
     </div>
   );
 };

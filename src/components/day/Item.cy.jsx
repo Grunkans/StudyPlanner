@@ -12,7 +12,7 @@ describe('< Item />', () => {
 
 
 	it('should be a deletebutton visible', () => {
-		cy.get(span).contains('Ta bort').should('be.visible')
+		cy.get(span).contains(".delete").should('be.visible')
 
 					
 	})
