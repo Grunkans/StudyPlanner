@@ -21,5 +21,20 @@ describe('item' , () => {
 			
 	})
 
+	//Som en student vill jag kunna ändra texten för en todo item, så att jag kan uppdatera den om något nytt händer.
+
+	it('should be able to change what a todo-item says' , () => {
+		cy.visit('/');
+		cy.get('[ data-cy="edit-button" ]').first().click()
+		cy.get('[ data-cy="edit-form" ]').click()
+		cy.get('[ data-cy="edit-form" ]').clear()
+		cy.get('[ data-cy="edit-form" ]').type("Göra klart biologin")
+		cy.get('[ data-cy="save-button" ]').click()
+		cy.get('[ data-cy="item-field" ]').first().should('contain', 'Göra klart biologin')
+
+
+	})
+
+
 	
 })
