@@ -10,7 +10,6 @@ describe('day' , () => {
 		cy.get('[ data-cy="search-results" ]').should('not.contain', 'inlämning')
 		cy.get('[ data-cy="search-results" ]').should('contain', 'Lektion i skolan 9-16')
 
-		
 	})
 
 	
